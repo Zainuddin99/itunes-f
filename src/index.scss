@@ -470,21 +470,3 @@ img{
   justify-content: justify-content;
 }
 }
-
-.inputField:focus{
-  position: relative;
-  animation: animateInput 0.3s ease;
-  bottom: 70px;
-  width: 70%;
-  transition: 0.3s ease;
-}
-
-.inputField:focus + .submit-btn{
-  position: relative;
-  animation: animateInput 0.3s ease;
-  bottom: 70px;
-}
-
-@keyframes animateInput {
-  from{bottom: 0;} to{bottom: 70px;}
-}

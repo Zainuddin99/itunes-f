@@ -46,11 +46,6 @@ setLoader(false)
   }
 }
 
-  const handleFocus = () =>{
-    setIsFocus(true)
-    
-  }
-
   function handlesearch(e){
     setStart(true)
     setLoader(true)
@@ -73,7 +68,7 @@ setLoader(false)
 <>
 { !isFocus && <h1 className="heading">Search songs from <span>iTunes</span></h1>}
 <form className="form-container" ref={formm}>
-  <input placeholder="Search by name, artist, albums, etc." className="inputField" type="text" value={search} onFocus={handleFocus} onBlur={()=>setIsFocus(false)} onChange={(e)=>{
+  <input placeholder="Search by name, artist, albums, etc." className="inputField" type="text" value={search} onBlur={()=>setIsFocus(false)} onChange={(e)=>{
     setIsSearch(true);
     return setSearch(e.target.value)}}></input>
   <button type="submit" className="submit-btn" onClick={handlesearch}>Submit</button>
